@@ -7,7 +7,7 @@ module.exports = {
            .then((users) => res.json(users))
            .catch((err) => res.status(500).json(err));
     },
-    //get a single user
+    //get a single user by id
     getSingleUser(req, res) {
        User.findOne({ _id: req.params.userId })
           .select('-__v')
